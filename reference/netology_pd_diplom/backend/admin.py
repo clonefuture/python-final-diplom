@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.contrib.admin import ModelAdmin
 from django.contrib.auth.admin import UserAdmin
 
 from backend.models import User, Shop, Category, Product, ProductInfo, Parameter, ProductParameter, Order, OrderItem, \
@@ -6,7 +7,7 @@ from backend.models import User, Shop, Category, Product, ProductInfo, Parameter
 
 
 @admin.register(User)
-class CustomUserAdmin(UserAdmin):
+class CustomUserAdmin(ModelAdmin):
     """
     Панель управления пользователями
     """
